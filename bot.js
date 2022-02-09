@@ -25,12 +25,12 @@ client.on('message', msg => {
     if(msg.content.startsWith("#update")){
         const embedupdate = new Discord.MessageEmbed()
         .setColor('#6dff00')
-	    .setTitle('BOT version 1.0 release notes')
+	    .setTitle('BOT version 2.0 release notes')
         .setDescription(
-        "**New update**\n"+"\u2002อัพเดทคำสั่ง\u2002 `#curse + แท็กคนอื่น`\u2002:\u2002บอทจะserver muteคนนั้นโดยสุ่มเวลา\nnormal ATK = 10 วิ critical rate(โดน 60 วิ) 20%  ลดโอกาส Rebound 40% >> 25%\n\n"+
+        "**New update**\n"+"\u2002Watch Party\n\u2002 `#watchparty | #yt | #wpt `\u2002:\u2002เพื่อรับลิงค์watch party\n\n"+
         "**commands**\n"+"\u2002`#gartic`\u2002:\u2002เพื่อเล่นเกม gaticphone\n"+
         "\u2002`#avalon`\u2002:\u2002เพื่อเล่นเกม avalon\n\u2002`#dixit`\u2002:\u2002เพื่อเล่นเกม dixit\n\u2002`#spyfall`\u2002:\u2002เพื่อเล่นเกม spyfall\n\u2002`#howtoplay`\u2002:\u2002เพื่อดูวิธีเล่นเกมต่างๆ\n"+
-        "\u2002`#movetohere`\u2002:\u2002ย้ายทุกคนมาที่voice channelที่คนใช้คำสั่งอยู่\n \n\n"+
+        "\u2002`#movetohere`\u2002:\u2002ย้ายทุกคนมาที่voice channelที่คนใช้คำสั่งอยู่\n\u2002`#curse + แท็กuser`\u2002:\u2002บอทจะserver muteคนที่ถูกเเท็กแบบสุ่มเวลา\n \n\n"+
         "**คำสั่งใช้Botเปิดเพลงพื้นฐาน**\nHydra เปิดเพลงจากyoutubeไม่ได้แล้วสามารถใช้ link spotify มาเปิดเเทนได้ \n"+
         " ใครขอเพลงผิด channel โดนbotตีตูดแน่\n\n"+
         "**hydra**\n\u2002`.p + ชื่อเพลงหรือลิงค์ที่จะฟัง`\u2002 >>\u2002 บอทจะเปิดเพลงให้ฟัง\n \u2002`.pause`\u2002 >> หยุดเพลง\n \u2002`.skip`\u2002 >>\u2002 ข้ามเพลงที่เล่นอยู่\n \u2002`.q`\u2002 >> เเสดงเพลงที่่อยู่ในคิว\n\n"+
@@ -44,9 +44,32 @@ client.on('message', msg => {
     }
 
     if (msg.content.startsWith("test")) {
+        const embedupdate = new Discord.MessageEmbed()
+        .setColor('#6dff00')
+	    .setTitle('BOT version 2.0 release notes')
+        .setDescription(
+        "**New update**\n"+"\u2002Watch Party\n\u2002 `#watchparty | #yt | #wpt `\u2002:\u2002เพื่อรับลิงค์watch party\n\n"+
+        "**commands**\n"+"\u2002`#gartic`\u2002:\u2002เพื่อเล่นเกม gaticphone\n"+
+        "\u2002`#avalon`\u2002:\u2002เพื่อเล่นเกม avalon\n\u2002`#dixit`\u2002:\u2002เพื่อเล่นเกม dixit\n\u2002`#spyfall`\u2002:\u2002เพื่อเล่นเกม spyfall\n\u2002`#howtoplay`\u2002:\u2002เพื่อดูวิธีเล่นเกมต่างๆ\n"+
+        "\u2002`#movetohere`\u2002:\u2002ย้ายทุกคนมาที่voice channelที่คนใช้คำสั่งอยู่\n\u2002`#curse + แท็กuser`\u2002:\u2002บอทจะserver muteคนที่ถูกเเท็กแบบสุ่มเวลา\n \n\n"+
+        "**คำสั่งใช้Botเปิดเพลงพื้นฐาน**\nHydra เปิดเพลงจากyoutubeไม่ได้แล้วสามารถใช้ link spotify มาเปิดเเทนได้ \n"+
+        " ใครขอเพลงผิด channel โดนbotตีตูดแน่\n\n"+
+        "**hydra**\n\u2002`.p + ชื่อเพลงหรือลิงค์ที่จะฟัง`\u2002 >>\u2002 บอทจะเปิดเพลงให้ฟัง\n \u2002`.pause`\u2002 >> หยุดเพลง\n \u2002`.skip`\u2002 >>\u2002 ข้ามเพลงที่เล่นอยู่\n \u2002`.q`\u2002 >> เเสดงเพลงที่่อยู่ในคิว\n\n"+
+        "**ProBot**\n\u2002`*p + ชื่อเพลงหรือลิงค์ที่จะฟัง`\u2002 >>\u2002 บอทจะเปิดเพลงให้ฟัง\n \u2002`*pause`\u2002 >> หยุดเพลง\n \u2002`*skip`\u2002 >>\u2002 ข้ามเพลงที่เล่นอยู่\n \u2002`*q`\u2002 >> เเสดงเพลงที่่อยู่ในคิว\n\n"
+        )
+        .setImage('https://c.tenor.com/t_ck4w9u9lAAAAAM/123-we-are-watching.gif')
+        .setTimestamp()
+        .setFooter('รอคิดออกก่อนเดี๋ยวมาทำเพิ่ม')
+        client.channels.cache.get(msg.author.lastMessageChannelID).send(embedupdate);
         return 0;
     }
-    
+    if (msg.content.startsWith("#watchparty") || msg.content.startsWith("#yt") || msg.content.startsWith("#wpt")) {
+        client.channels.cache.get(msg.author.lastMessageChannelID).send(
+            "**🍿Watch par-kee**\n > **🍻โคตรว่าง🍻**\n     ↳ https://discord.gg/rCpTb2tDB8"+
+            "\n > **🥂ว่างโคตร🥂**\n     ↳ https://discord.gg/MWgEcgp8cz"
+            );
+        return 0;
+    }
     //developing
     if (msg.content.startsWith("#เขย่าตัว")&& msg.author.id == "295518557817798657") {
         msg.react("😴");
@@ -134,16 +157,24 @@ client.on('message', msg => {
         client.channels.cache.get("836912289604960268").send("!q");
     }
 
+    if ((msg.content.startsWith(auth.prefix18) &&
+    msg.author.lastMessageChannelID != "836912289604960268")) {
+    last2msg.push(msg.content); 
+    last2msg.shift();
+    msg.delete({ timeout: 300 });
+    client.channels.cache.get("836912289604960268").send("<@" + msg.author.id + ">" + "มาขอเพลงในนี้เส้ ละก็ใช้ * (ดอกจัน) เเทน # ด้วยมันทับกับคำสั่งกูเว้ยย");
+    }
+
     if(msg.content.startsWith(auth.prefix4)||
         msg.content.startsWith(auth.prefix5)||
         msg.content.startsWith(auth.prefix6)){
         msg.delete({timeout:300});
     }
-    else if(msg.content.startsWith(auth.prefix7)||
-        msg.content.startsWith(auth.prefix8)||
-        msg.content.startsWith(auth.prefix9)){
+    
+    if(msg.content.startsWith(auth.prefix16)){
         msg.delete({timeout:300});
     }
+
 
     //gartic command
     if(msg.content.startsWith(auth.prefix10)){
@@ -334,5 +365,5 @@ client.on("voiceStateUpdate", (oldVoiceState, newVoiceState) => {
     }
     console.log(" ");
 });
-
-client.login(auth.token);
+var key = process.env.api_key;
+client.login(key);
